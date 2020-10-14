@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- *
- * @author Josué Tejeda
+ *Bryner Bonilla 2000233
+ * @author Josué Tejeda 2000256
  */
 public class Ejerciciosdenotas {
     public static  int Carne; 
@@ -39,5 +39,31 @@ public static  Scanner sc = new Scanner (System.in);
             System.out.println("Opcion 4 = Salir");
            
             opcion = sc.nextInt();
+            switch(opcion){
+                case 1:
+                    IngresodeDatos();
+                    break;
+                    
+                case 2:
+                   MostrarDatos();
+                    break;
+                case 3:
+                    CambiarDatos();
+                    break; 
+            }
+        }while(opcion !=4);
+       
+    }
+    public static void MostrarDatos(){
+        System.out.println("Los datos son");
+                    System.out.println("Numero de alumnos \t NO.Alumno \t NO.Carne \t ParcialUno \t ParcialDos \t zona \t Examen Final \t Total");
+                    int posicion = 0;
+                    for (Alumnos alumno : ListAlumnos) {
+                        System.out.println(posicion+"\t"+alumno.Carne+"\t"+alumno.parcialUno+"\t"+alumno.parcialDos+"\t"+alumno.zona+"\t"+alumno.examenFinal+"\t"+alumno.total);
+                        posicion++;
+                    }
+        
+    }
 
     }
+        
